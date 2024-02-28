@@ -5,7 +5,7 @@ export default function Button({ label }) {
     <View style={styles.buttonContainer}>
      <Pressable 
         style={styles.button}
-        onPress={() => alert('Você pressionou ${label}')}
+        onPress={() => alert(`Você pressionou ${label}`)}
      >
         <Text style= {styles.buttonLabel}>{label}</Text>
         </Pressable>
@@ -15,6 +15,6 @@ export default function Button({ label }) {
 
 const styles = StyleSheet.create({
     button:{
-        
+
     }
 })
