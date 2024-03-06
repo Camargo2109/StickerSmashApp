@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Image } from 'react-native';
 import ImageViewer from './src/components/ImageViewer';
 import Button from './src/components/Button';
+import * as ImagePicker from 'expo-image-picker';
 
 const PlaceholderImage = require('./assets/pelé.jpg');
 
@@ -12,8 +13,8 @@ export default function App() {
         <ImageViewer placeholderImageSource={PlaceholderImage}/>
       </View>
       <View style={styles.footerContainer}>
-        <Button label="Escolher foto"/>
-        <Button label="Usar esta foto"/>
+        <Button label="Escolher Foto" theme="primary"/>
+        <Button label="Usar esta Foto"/>
       </View>
       <StatusBar style="auto" />
     </View>

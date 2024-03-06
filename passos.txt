@@ -18,3 +18,6 @@ npx expo install react-dom react-native-web @expo/webpack-config
 
 Executar o projeto no navegador:
 npx expo start
+
+Para instalar o image picker
+npx expo install expo-image-picker
