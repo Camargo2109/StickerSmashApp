@@ -1,10 +1,11 @@
-git config --global user.name Arthur Camargo
-git config --global user.email arthur.barrabonita@gmail.com
+Configurar o Git Local:
+git config --global user.name GalloJunior
+git config --global user.email gallojunior@gmail.com
 
-Documentação oficial do Expo:
+Site da Documentação oficial do Expo:
 docs.expo.dev
 
-Ambiente de um projeto React Native Expo
+Ambiente de um projeto com React Native Expo
 1. Node.js
 2. Git
 3. Emulador Android (Android Studio)
@@ -18,6 +19,10 @@ npx expo install react-dom react-native-web @expo/webpack-config
 
 Executar o projeto no navegador:
 npx expo start
+
+Executar o projeto no celular:
+npx expo start --localhost --android
+
 
 Para instalar o image picker
 npx expo install expo-image-picker
