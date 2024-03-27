@@ -1,6 +1,6 @@
 Configurar o Git Local:
-git config --global user.name GalloJunior
-git config --global user.email gallojunior@gmail.com
+git config --global user.name ArthurCamargo
+git config --global user.email arthur.barrabonita@gmail.com
 
 Site da Documentação oficial do Expo:
 docs.expo.dev
