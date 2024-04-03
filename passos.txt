@@ -20,6 +20,9 @@ npx expo install react-dom react-native-web @expo/webpack-config
 Executar o projeto no navegador:
 npx expo start
 
+Antes de executar o comando abaixo, executar:
+npm i
+
 Executar o projeto no celular:
 npx expo start --localhost --android
 
