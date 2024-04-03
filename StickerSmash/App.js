@@ -8,6 +8,7 @@ import IconButton from './src/components/IconButton';
 import * as ImagePicker from 'expo-image-picker';
 import EmojiPicker from './src/components/EmojiPicker';
 import EmojiList from './src/components/EmojiList';
+import EmojiList from './src/components/EmojiList';
 
 const PlaceholderImage = require('./assets/images/background-image.png');
 
