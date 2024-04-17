@@ -8,7 +8,6 @@ import IconButton from './src/components/IconButton';
 import * as ImagePicker from 'expo-image-picker';
 import EmojiPicker from './src/components/EmojiPicker';
 import EmojiList from './src/components/EmojiList';
-import EmojiList from './src/components/EmojiList';
 
 const PlaceholderImage = require('./assets/images/background-image.png');
 
@@ -20,14 +19,14 @@ export default function App() {
 
   const onReset = () => {
     setShowAppOptions(false);
-    //
   }
 
   const onAddSticker = () => {
     setIsModalVisible(true);
   }
+
   const onSaveImageAsync = () => {
-    //
+    // 
   }
 
   const onModalClose = () => {
@@ -54,33 +53,35 @@ export default function App() {
           placeholderImageSource={PlaceholderImage}
           selectedImage={selectedImage}
         />
+        {pickedEmoji && 
+        <EmojiSticker imageSize={100} stickerSource={pickedEmoji}/>}
       </View>
-      {showAppOptions ? (
-        <View style={styles.optionsContainer}>
-          <View style={styles.optionsRow}>
-            <IconButton icon="refresh" label="Reiniciar" onPress={onReset} />
-            <CircleButton onPress={onAddSticker} />
-            <IconButton icon="save-alt" label="Salvar" onPress={onSaveImageAsync} />
+        { showAppOptions ? (
+          <View style={styles.optionsContainer}>
+            <View style={styles.optionsRow}>
+              <IconButton icon="refresh" label="Reiniciar" onPress={onReset} />
+              <CircleButton onPress={onAddSticker} />
+              <IconButton icon="save-alt" label="Salvar" onPress={onSaveImageAsync} />
+            </View>
           </View>
-        </View>
-      ) : (
-        <View style={styles.footerContainer}>
-          <Button
-            label="Escolher Foto"
-            theme="primary"
-            onPress={pickImageAsync}
-          />
-          <Button
-            label="Usar esta Foto"
-            onPress={() => setShowAppOptions(true)}
-          />
-        </View>
-      )}
-      <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
-        <EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose}/>
-      </EmojiPicker>
+        ) : (
+      <View style={styles.footerContainer}>
+        <Button
+          label="Escolher Foto"
+          theme="primary"
+          onPress={pickImageAsync}
+        />
+        <Button
+          label="Usar esta Foto"
+          onPress={() => setShowAppOptions(true)}
+        />
+      </View>
+        )}
+        <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
+          <EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose} />
+        </EmojiPicker>
       <StatusBar style="auto" />
-    </View >
+    </View>
   );
 }
 
